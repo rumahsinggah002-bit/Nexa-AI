@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#090d12">
+  <title>NEXA AI</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <div class="brand">
+        <div class="brand-mark">N</div>
+        <div><div class="brand-name">NEXA <span>AI</span></div><div class="brand-sub">YOUR PERSONAL AI</div></div>
+      </div>
+      <button id="newChatBtn" class="new-chat" type="button" aria-label="Percakapan baru">＋</button>
+    </header>
+
+    <main id="chat" class="chat">
+      <section id="welcome" class="welcome">
+        <div class="welcome-orb"><span>✦</span></div>
+        <p class="eyebrow">ASISTEN AI PRIBADIMU</p>
+        <h1>Halo, ada yang<br><span>ingin kamu ketahui?</span></h1>
+        <p class="welcome-copy">Tanyakan apa saja. NEXA siap membantu belajar, mencari ide, menulis, dan coding.</p>
+        <div class="suggestions">
+          <button class="suggestion" data-prompt="Jelaskan bagaimana AI bekerja dengan bahasa sederhana.">✧ <span>Jelaskan cara kerja AI</span></button>
+          <button class="suggestion" data-prompt="Bantu aku membuat ide proyek JavaScript yang berguna.">⌘ <span>Ide proyek JavaScript</span></button>
+          <button class="suggestion" data-prompt="Buatkan jadwal belajar yang mudah diikuti.">▤ <span>Buat jadwal belajar</span></button>
+          <button class="suggestion" data-prompt="Ceritakan fakta sains yang menarik.">◉ <span>Fakta sains menarik</span></button>
+        </div>
+      </section>
+      <div id="messages" class="messages" aria-live="polite"></div>
+    </main>
+
+    <footer class="composer-wrap">
+      <div id="status" class="status">NEXA siap membantu</div>
+      <form id="chatForm" class="composer">
+        <textarea id="prompt" rows="1" maxlength="4000" placeholder="Ketik pesan untuk NEXA..." aria-label="Pesan"></textarea>
+        <button id="sendBtn" class="send-btn" type="submit" aria-label="Kirim pesan"><span>➤</span></button>
+      </form>
+      <p class="disclaimer">AI dapat membuat kesalahan. Periksa kembali informasi penting.</p>
+    </footer>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

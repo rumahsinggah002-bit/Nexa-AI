@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
+:root{color-scheme:dark;--bg:#090d12;--panel:#111923;--panel2:#18232e;--line:#253340;--text:#eef5f4;--muted:#91a1ad;--green:#35d39a;--green2:#17a978}
+*{box-sizing:border-box}
+body{margin:0;background:radial-gradient(ellipse at 50% -20%,#18352f 0%,var(--bg) 48%);color:var(--text);font-family:'DM Sans',sans-serif;min-height:100dvh}
+button,textarea{font:inherit}
+.app-shell{height:100dvh;max-width:820px;margin:auto;display:flex;flex-direction:column;padding:env(safe-area-inset-top) 16px env(safe-area-inset-bottom)}
+.topbar{height:72px;flex-shrink:0;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #ffffff0d}
+.brand{display:flex;align-items:center;gap:11px}.brand-mark{height:42px;width:42px;border-radius:14px;background:linear-gradient(145deg,#45e3a9,#13845e);display:grid;place-items:center;color:#06140f;font:700 25px 'Space Grotesk';box-shadow:0 5px 24px #27c58a30}
+.brand-name{font:700 19px 'Space Grotesk';letter-spacing:1.2px}.brand-name span{color:var(--green)}.brand-sub{font-size:9px;letter-spacing:2px;color:var(--muted);margin-top:2px}
+.new-chat{height:40px;width:42px;border:1px solid var(--line);border-radius:13px;background:var(--panel);color:var(--green);font-size:25px}
+.chat{flex:1;overflow-y:auto;overscroll-behavior:contain;scrollbar-width:thin;padding:24px 2px}
+.welcome{max-width:570px;margin:7vh auto 24px;text-align:center}.welcome-orb{width:72px;height:72px;margin:0 auto 22px;border-radius:24px;display:grid;place-items:center;background:linear-gradient(145deg,#1e483d,#10231f);border:1px solid #39d69a55;color:#6cf0ba;font-size:32px;box-shadow:0 0 60px #26c88c18}
+.eyebrow{color:var(--green);font-size:10px;letter-spacing:2.8px;font-weight:700}.welcome h1{font:700 clamp(29px,7vw,43px)/1.15 'Space Grotesk';margin:12px 0}.welcome h1 span{color:var(--green)}.welcome-copy{color:var(--muted);font-size:14px;line-height:1.7;max-width:410px;margin:0 auto 25px}
+.suggestions{display:grid;grid-template-columns:1fr 1fr;gap:10px;text-align:left}.suggestion{border:1px solid var(--line);background:#111a23;border-radius:14px;padding:14px 12px;color:var(--green);display:flex;align-items:center;gap:9px;font-size:16px}.suggestion span{color:#dce7e6;font-size:12px}
+.messages{display:flex;flex-direction:column;gap:18px;padding:8px 0 22px}.message{display:flex;gap:10px;align-items:flex-start;max-width:100%}.message.user{justify-content:flex-end}.avatar{width:30px;height:30px;flex-shrink:0;border-radius:10px;background:#173b31;color:var(--green);display:grid;place-items:center;font:700 13px 'Space Grotesk'}.bubble{max-width:min(84%,620px);padding:13px 15px;border-radius:5px 16px 16px 16px;background:var(--panel);border:1px solid var(--line);font-size:14px;line-height:1.65;white-space:pre-wrap;overflow-wrap:anywhere}.user .bubble{background:#123d30;border-color:#1b7858;border-radius:16px 5px 16px 16px}.typing{color:var(--muted);font-size:13px;padding:10px}
+.composer-wrap{flex-shrink:0;padding:8px 0 10px;background:linear-gradient(transparent,var(--bg) 18%)}
+.status{font-size:11px;color:var(--muted);padding:0 4px 9px}.composer{display:flex;align-items:flex-end;gap:9px;background:#121c26;border:1px solid #2a3b48;border-radius:19px;padding:9px 9px 9px 15px;box-shadow:0 8px 30px #0005}.composer:focus-within{border-color:#269d72}
+textarea{flex:1;resize:none;max-height:130px;min-height:27px;border:0;outline:0;background:transparent;color:var(--text);font-size:14px;line-height:1.5;padding:4px 0}textarea::placeholder{color:#71818d}
+.send-btn{height:39px;width:42px;border:0;border-radius:13px;background:linear-gradient(145deg,#4be4ad,#19a777);color:#052017;font-size:20px;font-weight:700}.send-btn:disabled{opacity:.45}
+.disclaimer{text-align:center;color:#62717d;font-size:10px;margin:9px 0 0}
+@media(max-width:420px){.app-shell{padding-left:12px;padding-right:12px}.suggestion{padding:12px 9px}.suggestion span{font-size:11px}.welcome{margin-top:5vh}}
